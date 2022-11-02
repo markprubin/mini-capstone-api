@@ -18,19 +18,23 @@ puts "[4] Heavy Duty Work Gloves"
 input = gets.chomp
 
 if input == "1"
-  response = HTTP.get("https://http://localhost:3000/shovel_path/1")
-  shovel = response.parse["name"]
+  response = HTTP.get("https://http://localhost:3000/product_path/1")
+  product = response.parse["name"]
+  pp product
 end
 if input == "2"
-  response = HTTP.get("https://http://localhost:3000/shovel_path/2")
-  shovel = response.parse["name"]
+  response = HTTP.get("https://http://localhost:3000/product_path/2")
+  product = response.parse["name"]
+  pp product
 end
 if input == "3"
-  response = HTTP.get("https://http://localhost:3000/rake_path/3")
-  shovel = response.parse["name"]
+  response = HTTP.get("https://http://localhost:3000/product_path/3")
+  product = response.parse["name"]
+  pp product
 end
 if input == "4"
-  response = HTTP.get("https://http://localhost:3000/gravel_path/4")
-  shovel = response.parse["name"]
+  response = HTTP.get("https://http://localhost:3000/product_path/4")
+  product = response.parse["name"]
+  pp product
 end
 
