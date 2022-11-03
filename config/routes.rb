@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-get "/product_path/:id", controller: "products", action: "one_product"
+  get "/products", => "products#index"
+  get "/producs/:id" => "products#show"
 
 end
