@@ -17,3 +17,14 @@ Content-Type: application/json
   "image_url": "https://m.media-amazon.com/images/I/41Mg9AGRbRL._AC_SY580_.jpg",
   "description": "A sweet, sweet hammer to get the toughest nails into the wood."
 }
+
+### PRODUCTS UPDATE
+
+PATCH http://localhost:3000/products/2
+Content-Type: application/json
+
+ {
+  "name": "Gas Lawnmower",
+  "price": 59,
+  "description": "Add some gnarly fumes to the world with your dirty lawnmower."
+ }
