@@ -28,3 +28,8 @@ Content-Type: application/json
   "price": 59,
   "description": "Add some gnarly fumes to the world with your dirty lawnmower."
  }
+
+### PRODUCTS DESTROY
+
+ DELETE http://localhost:3000/products/6
+
