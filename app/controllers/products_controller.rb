@@ -7,8 +7,7 @@ class ProductsController < ApplicationController
   
   def show
     products = Product.find_by(id: params["id"])
-    render json: products.as_json
-    #render json: Product.all (why does this also work?)
+    render json: products.as_json(methods: [:friendly_created_at, :is_discounted?, :tax, :total])
   end
 
   def create
