@@ -24,9 +24,9 @@ PATCH http://localhost:3000/products/2.json
 Content-Type: application/json
 
  {
-  "name": "Gas Lawnmower",
-  "price": 59,
-  "description": "Add some gnarly fumes to the world with your dirty lawnmower."
+  "name": "Nuclear Lawnmower",
+  "price": 70,
+  "description": "A safer fuel alternative to lawnmowing."
  }
 
 ### PRODUCTS DESTROY
