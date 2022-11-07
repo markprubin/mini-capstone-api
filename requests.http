@@ -1,26 +1,26 @@
 ### PRODUCTS INDEX
 
-GET http://localhost:3000/products
+GET http://localhost:3000/products.json
 
 ### PRODUCTS SHOW
 
-GET http://localhost:3000/products/4
+GET http://localhost:3000/products/3.json
 
 ### PRODUCTS CREATE
 
-POST http://localhost:3000/products
+POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "Hammer",
-  "price": 25,
-  "image_url": "https://m.media-amazon.com/images/I/41Mg9AGRbRL._AC_SY580_.jpg",
-  "description": "A sweet, sweet hammer to get the toughest nails into the wood."
+  "name": "Test Tool",
+  "price": 999,
+  "image_url": "no_url",
+  "description": "Just a worthless tool."
 }
 
 ### PRODUCTS UPDATE
 
-PATCH http://localhost:3000/products/2
+PATCH http://localhost:3000/products/2.json
 Content-Type: application/json
 
  {
