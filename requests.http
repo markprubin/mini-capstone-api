@@ -12,10 +12,10 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "Test Tool",
-  "price": 999,
-  "image_url": "no_url",
-  "description": "Just a worthless tool."
+  "name": "Test Tool number 2",
+  "price": 100,
+  "image_url": "www.google.com",
+  "description": "test test test"
 }
 
 ### PRODUCTS UPDATE
@@ -25,7 +25,8 @@ Content-Type: application/json
 
  {
   "name": "Nuclear Lawnmower",
-  "price": 70,
+  "price": 59,
+  "image_url": "https://mobileimages.lowes.com/productimages/aa4f51ce-2442-4dd0-a066-56f556421e54/11470444.jpg",
   "description": "A safer fuel alternative to lawnmowing."
  }
 

@@ -1,6 +1,9 @@
 class Product < ApplicationRecord
-  validates :name, presence: true
-  
+  validates :name, presence: true, uniqueness: true
+  validates :price, presence: true, numericality: { greater_than: 0 }
+  validates :description, presence: true, length: { in: 10..500 }
+  # validates :image_url, content_type: { 'image/jpeg', 'image/png' } #activerecordstorage gem
+
 
 
   def friendly_created_at
