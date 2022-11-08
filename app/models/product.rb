@@ -2,7 +2,11 @@ class Product < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :price, presence: true, numericality: { greater_than: 0 }
   validates :description, presence: true, length: { in: 10..500 }
-  # validates :image_url, content_type: { 'image/jpeg', 'image/png' } #activerecordstorage gem
+  # has_one_attached :image_url
+  # validates :image_url, 
+  #           content_type: [:jpg]
+            
+            
 
 
 

@@ -12,9 +12,9 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "Test Tool number 2",
+  "name": "Test Tool number 3",
   "price": 100,
-  "image_url": "www.google.com",
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/MTD_Lawn_Mower.jpg/220px-MTD_Lawn_Mower.jpg",
   "description": "test test test"
 }
 
