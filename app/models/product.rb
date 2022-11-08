@@ -1,4 +1,8 @@
 class Product < ApplicationRecord
+  validates :name, presence: true
+  
+
+
   def friendly_created_at
     created_at.strftime("%B %e, %Y")
   end
