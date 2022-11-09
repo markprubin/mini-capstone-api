@@ -12,20 +12,22 @@ POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "Test Tool number 3",
-  "price": 100,
-  "description": "test test test"
+  "name": "Weed Trimmer",
+  "price": 64,
+  "description": "Wack those weeds with a weed trimmer.",
+  "supplier_id": 1
 }
 
 ### PRODUCTS UPDATE
 
-PATCH http://localhost:3000/products/2.json
+PATCH http://localhost:3000/products/12.json
 Content-Type: application/json
 
  {
   "name": "Nuclear Lawnmower",
   "price": 59,
-  "description": "A safer fuel alternative to lawnmowing."
+  "description": "A safer fuel alternative to lawnmowing.",
+  "supplier_id": 2
  }
 
 ### PRODUCTS DESTROY
