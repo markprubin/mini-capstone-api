@@ -14,7 +14,6 @@ Content-Type: application/json
 {
   "name": "Test Tool number 3",
   "price": 100,
-  "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/MTD_Lawn_Mower.jpg/220px-MTD_Lawn_Mower.jpg",
   "description": "test test test"
 }
 
@@ -26,7 +25,6 @@ Content-Type: application/json
  {
   "name": "Nuclear Lawnmower",
   "price": 59,
-  "image_url": "https://mobileimages.lowes.com/productimages/aa4f51ce-2442-4dd0-a066-56f556421e54/11470444.jpg",
   "description": "A safer fuel alternative to lawnmowing."
  }
 
