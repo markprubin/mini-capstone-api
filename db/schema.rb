@@ -22,6 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_09_181315) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity"
+    t.integer "supplier_id"
   end
 
   create_table "suppliers", force: :cascade do |t|
@@ -30,7 +31,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_09_181315) do
     t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "supplier_id"
   end
 
 end
