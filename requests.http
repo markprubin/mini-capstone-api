@@ -1,6 +1,7 @@
 ### PRODUCTS INDEX
 
 GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgxOTM3NDh9.3BWzxYTenVSH_9dTSejB8NlTf8QcHsnDZKNiyGFUgbE
 
 ### PRODUCTS SHOW
 
