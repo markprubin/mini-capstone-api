@@ -50,3 +50,4 @@ group :development do
 end
 
 gem "seed_dump"
+gem 'jwt'
