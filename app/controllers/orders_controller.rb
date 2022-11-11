@@ -1,8 +1,11 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user
 
   def index
-    @orders = current_user.orders
-    render :index
+  
+  @orders = current_user.orders
+  render :index
+   
   end
 
   def show

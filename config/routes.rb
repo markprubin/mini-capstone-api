@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   #User Creation
   post "/users" => "users#create"
+  # patch "/users" => "users#update"
   #User Log in
   post "/sessions" => "sessions#create"
 

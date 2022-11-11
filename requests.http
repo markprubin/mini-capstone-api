@@ -1,16 +1,21 @@
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyODQzNTN9.m5JROmskx2wfvjaNXJ8ZV_iuLfQbV-AP1SsCRwRdJpk
+@jwt1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyODQzNzN9.ygIqGs2MUBJd3Sih-RAsGHY4R8m5eKHem4CFDESOWew
+
 ### PRODUCTS INDEX
 
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgxOTM3NDh9.3BWzxYTenVSH_9dTSejB8NlTf8QcHsnDZKNiyGFUgbE
+Authorization: Bearer {{jwt1}}
 
 ### PRODUCTS SHOW
 
 GET http://localhost:3000/products/3.json
+Authorization: Bearer {{jwt1}}
 
 ### PRODUCTS CREATE
 
 POST http://localhost:3000/products.json
 Content-Type: application/json
+Authorization: Bearer {{jwt1}}
 
 {
   "name": "Weed Trimmer",
@@ -23,6 +28,7 @@ Content-Type: application/json
 
 PATCH http://localhost:3000/products/12.json
 Content-Type: application/json
+Authorization: Bearer {{jwt1}}
 
  {
   "name": "Nuclear Lawnmower",
@@ -34,17 +40,21 @@ Content-Type: application/json
 ### PRODUCTS DESTROY
 
  DELETE http://localhost:3000/products/6
+Authorization: Bearer {{admin-jwt}}
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test name",
-  "email": "test@test2.com",
+  "name": "Mark Rubin",
+  "email": "mark@example.com",
   "password": "password",
   "password_confirmation": "password"
 }
+
+### USERS UPDATE
+
 
 ### SESSIONS CREATE [LOG IN]
 
@@ -58,20 +68,20 @@ Content-Type: application/json
 
 ### ORDERS INDEX
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyODA2OTR9.UXnMDeeClGFYZUsxEIVjiJo9dQn0EnqjedLSJIk730s
+Authorization: Bearer {{jwt1}}
 
 ### ORDERS SHOW
 
 GET http://localhost:3000/orders/1.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyODA2OTR9.UXnMDeeClGFYZUsxEIVjiJo9dQn0EnqjedLSJIk730s
+Authorization: Bearer {{jwt1}}
 
 ### ORDERS CREATE
 
 POST http://localhost:3000/orders.json
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzk4NjN9.HFIZFuqfVPWahcmTEpGU-Q4Ee6KjsnHI83oLtkfg_BU
+Authorization: Bearer {{jwt1}}
 
 {
   "product_id": 2,
-  "quantity": 2
+  "quantity": 3
 }
