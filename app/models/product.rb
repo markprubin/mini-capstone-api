@@ -3,9 +3,10 @@ class Product < ApplicationRecord
   # validates :name, presence: true, uniqueness: true
   # validates :price, presence: true, numericality: { greater_than: 0 }
   # validates :description, presence: true, length: { in: 10..500 }
-
-  belongs_to :user         
+  has_many :orders        
   belongs_to :supplier
+  has_many :images
+
   # def supplier
   #   Supplier.find_by(id: supplier_id)
   # end
@@ -27,6 +28,10 @@ class Product < ApplicationRecord
     else
       return false
     end
+  end
+
+  def subtotal
+    price * quantity
   end
 
   def tax

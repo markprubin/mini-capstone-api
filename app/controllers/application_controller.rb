@@ -22,4 +22,8 @@ class ApplicationController < ActionController::API
       render json: {}, status: :unauthorized
     end
   end
+
+  
+
+
 end

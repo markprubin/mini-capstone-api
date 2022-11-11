@@ -55,3 +55,26 @@ Content-Type: application/json
   "email": "test@test2.com",
   "password": "password"
 }
+
+### ORDERS INDEX
+GET http://localhost:3000/orders.json
+
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzYwNjh9.S7a4ROUr2NSqe9ieBmaVzArTJVEH7W0U5HmXkq04gFk
+
+### ORDERS SHOW
+
+GET http://localhost:3000/orders/1.json
+
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzYwNjh9.S7a4ROUr2NSqe9ieBmaVzArTJVEH7W0U5HmXkq04gFk
+
+### ORDERS CREATE
+
+POST http://localhost:3000/orders.json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjgyNzYwNjh9.S7a4ROUr2NSqe9ieBmaVzArTJVEH7W0U5HmXkq04gFk
+
+{
+  "user_id": 2,
+  "product_id": 2,
+  "quantity": 1
+}
