@@ -1,13 +1,13 @@
 class OrdersController < ApplicationController
 
   def index
-    order = Order.all
-    render json: order.as_json
+    @orders = current_user.orders
+    render :index
   end
 
   def show
-    order = Order.find_by(id: params[:id])
-    render json: order.as_json
+    @order = current_user.orders.find_by(id: params[:id])
+    render :show
   end
 
   def create
