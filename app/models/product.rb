@@ -7,17 +7,13 @@ class Product < ApplicationRecord
   belongs_to :supplier
   has_many :images
   has_many :category_products
+  has_many :categories, through: :category_products
 
-  # def supplier
-  #   Supplier.find_by(id: supplier_id)
+  # def categories
+  #   category_products.map do |category_product|
+  #     category_product.category
+  #   end
   # end
-
-  has_many :images
-
-  # def images
-  #   Image.where(product_id: id)
-  # end
-
 
   def friendly_created_at
     created_at.strftime("%B %e, %Y")
