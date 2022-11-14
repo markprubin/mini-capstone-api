@@ -6,8 +6,7 @@
   friendly_created_at: @product.friendly_created_at,
   is_discounted?: @product.is_discounted?,
   total: @product.total,
-  created_at: @product.created_at,
-  updated_at: @product.updated_at,
+  category: @product.categories,
   supplier: @product.supplier,
   images: @product.images
 }
