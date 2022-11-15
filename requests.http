@@ -1,5 +1,5 @@
 @admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyODQzNTN9.m5JROmskx2wfvjaNXJ8ZV_iuLfQbV-AP1SsCRwRdJpk
-@jwt1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjgyODQzNzN9.ygIqGs2MUBJd3Sih-RAsGHY4R8m5eKHem4CFDESOWew
+@jwt1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njg2MjI5MTZ9.RiugLLfaomAkJxu2WH-_As8tnymQA2P4_ck_0Cw8WP0
 
 ### PRODUCTS INDEX
 
@@ -85,3 +85,17 @@ Authorization: Bearer {{jwt1}}
 #   "product_id": 2,
 #   "quantity": 3
 # }
+
+### CARTED PRODUCTS INDEX
+GET http://localhost:3000/carted_products.json
+
+### Carted Products CREATE
+
+POST http://localhost:3000/carted_products.json
+Content-Type: application/json
+Authorization: Bearer {{jwt1}}
+
+{
+  "product_id": 5,
+  "quantity": 4
+}
