@@ -81,7 +81,7 @@ POST http://localhost:3000/orders.json
 Content-Type: application/json
 Authorization: Bearer {{jwt1}}
 
-{
-  "product_id": 2,
-  "quantity": 3
-}
+# {
+#   "product_id": 2,
+#   "quantity": 3
+# }

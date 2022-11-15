@@ -22,8 +22,8 @@ class OrdersController < ApplicationController
 
     order = Order.new(
       user_id: current_user.id,
-      product_id: params[:product_id],
-      quantity: params[:quantity],
+      # product_id: params[:product_id],
+      # quantity: params[:quantity],
       subtotal: calc_subtotal,
       tax: calc_tax,
       total: calc_total,
