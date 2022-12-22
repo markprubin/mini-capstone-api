@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   # delete "/suppliers/:id" => "suppliers#destroy"
 
   #User Creation
+  get "/users" => "users#index"
   post "/users" => "users#create"
   # patch "/users" => "users#update"
   #User Log in

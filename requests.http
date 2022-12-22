@@ -1,5 +1,5 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Njg3NDc0NjZ9.V6M7iz-pvuFwrnxJHwoCtLeJcqoe5kw0_TL5nVgMSSM
-@jwt1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Njg2MjI5MTZ9.RiugLLfaomAkJxu2WH-_As8tnymQA2P4_ck_0Cw8WP0
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NzE4MTYxMDd9.IH8c73SrsmlPYw-iCYhQdyUd1vvqDsIgDDPcC7fI7FI
+@jwt1 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzE4MTkzNzJ9.e1OpbwPi-R9qV9gZK9coqHGrTdw6XrqfItttjzGecdE
 
 ### PRODUCTS INDEX
 
@@ -26,20 +26,20 @@ Authorization: Bearer {{jwt1}}
 
 ### PRODUCTS UPDATE
 
-PATCH http://localhost:3000/products/12.json
+PATCH http://localhost:3000/products/2.json
 Content-Type: application/json
-Authorization: Bearer {{jwt1}}
+Authorization: Bearer {{admin-jwt}}
 
  {
-  "name": "Nuclear Lawnmower",
+  "name": "Electric Lawnmower",
   "price": 59,
-  "description": "A safer fuel alternative to lawnmowing.",
+  "description": "A fuel alternative to lawnmowing.",
   "supplier_id": 2
  }
 
 ### PRODUCTS DESTROY
 
- DELETE http://localhost:3000/products/6
+ DELETE http://localhost:3000/products/2
 Authorization: Bearer {{admin-jwt}}
 
 ### Users create (signup)
@@ -47,8 +47,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Mark Rubin",
-  "email": "mark@example.com",
+  "name": "Mark",
+  "email": "markrubin@example.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -62,7 +62,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "mark@example.com",
+  "email": "test@test2.com",
   "password": "password"
 }
 
@@ -72,14 +72,14 @@ Authorization: Bearer {{jwt1}}
 
 ### ORDERS SHOW
 
-GET http://localhost:3000/orders/1.json
+GET http://localhost:3000/orders/3.json
 Authorization: Bearer {{jwt1}}
 
 ### ORDERS CREATE
 
 POST http://localhost:3000/orders.json
 Content-Type: application/json
-Authorization: Bearer {{admin-jwt}}
+Authorization: Bearer {{jwt1}}
 
 
 ### CARTED PRODUCTS INDEX
@@ -90,15 +90,15 @@ Authorization: Bearer {{admin-jwt}}
 
 POST http://localhost:3000/carted_products.json
 Content-Type: application/json
-Authorization: Bearer {{admin-jwt}}
+Authorization: Bearer {{jwt1}}
 
 {
-  "product_id": 5,
+  "product_id": 3,
   "quantity": 2
 }
 
 ### Carted Products DESTROY
 
-DELETE http://localhost:3000/carted_products/7.json
+DELETE http://localhost:3000/carted_products/11.json
 Content-Type: application/json
-Authorization: Bearer {{admin-jwt}}
+Authorization: Bearer {{jwt1}}
